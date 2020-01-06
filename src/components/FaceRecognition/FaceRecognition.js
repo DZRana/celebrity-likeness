@@ -4,7 +4,12 @@ import "./FaceRecognition.css";
 const FaceRecognition = ({ imageUrl, box, celeb, likeness }) => {
   return (
     <div className="center ma">
-      <div className="absolute mt2">
+      { celeb &&
+      <div>
+        <p>{`Your face most closely resembles ${celeb} with a likeness of ${likeness}%.`}</p>
+      </div>
+      }
+      <div className="absolute mt5">
         <img
           id="inputimage"
           alt=""
@@ -21,6 +26,7 @@ const FaceRecognition = ({ imageUrl, box, celeb, likeness }) => {
             left: box.leftCol
           }}
         ></div>
+        
       </div>
     </div>
   );
