@@ -1,7 +1,7 @@
 import React from "react";
 import "./FaceRecognition.css";
 
-const FaceRecognition = ({ imageUrl, box }) => {
+const FaceRecognition = ({ imageUrl, box, celeb, likeness }) => {
   return (
     <div className="center ma">
       <div className="absolute mt2">
@@ -21,6 +21,9 @@ const FaceRecognition = ({ imageUrl, box }) => {
             left: box.leftCol
           }}
         ></div>
+      </div>
+      <div className="center">
+        <p>{`You look like ${celeb} with a likeness of ${likeness}%.`}</p>
       </div>
     </div>
   );
