@@ -22,9 +22,6 @@ const FaceRecognition = ({ imageUrl, box, celeb, likeness }) => {
           }}
         ></div>
       </div>
-      <div className="center">
-        <p>{`You look like ${celeb} with a likeness of ${likeness}%.`}</p>
-      </div>
     </div>
   );
 };

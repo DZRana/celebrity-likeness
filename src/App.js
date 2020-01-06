@@ -6,6 +6,7 @@ import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
+import Celebrity from "./components/Celebrity/Celebrity";
 import Clarifai from "clarifai";
 import "./App.css";
 
@@ -68,6 +69,14 @@ class App extends Component {
       .then(response =>
         this.displayFaceBox(this.calculateFaceLocation(response))
       )
+      .then(
+        response => console.log(response.data)
+        /*
+        this.setState({
+          celeb: response.data.outputs[0].data.regions[0].data.concepts[0].name
+        })
+        */
+      )
       .catch(err => console.log(err));
   };
 
@@ -93,6 +102,8 @@ class App extends Component {
             <FaceRecognition
               box={this.state.box}
               imageUrl={this.state.imageUrl}
+            />
+            <Celebrity
               celeb={this.state.celeb}
               likeness={this.state.likeness}
             />
