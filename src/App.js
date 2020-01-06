@@ -41,6 +41,12 @@ class App extends Component {
 
   calculateFaceLocation = data => {
     console.log(data);
+    this.setState({
+      celeb: data.outputs[0].data.regions[0].data.concepts[0].name
+    });
+    this.setState({
+      likeness: ((data.outputs[0].data.regions[0].data.concepts[0].value) * 100).toFixed(2)
+    });
     const clarifaiFace =
       data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById("inputimage");
@@ -68,14 +74,6 @@ class App extends Component {
       .predict(Clarifai.CELEBRITY_MODEL, this.state.input)
       .then(response =>
         this.displayFaceBox(this.calculateFaceLocation(response))
-      )
-      .then(
-        response => console.log(response.data)
-        /*
-        this.setState({
-          celeb: response.data.outputs[0].data.regions[0].data.concepts[0].name
-        })
-        */
       )
       .catch(err => console.log(err));
   };
