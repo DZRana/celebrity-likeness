@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Particles from "react-particles-js";
 import Navigation from "./components/Navigation/Navigation";
 import Signin from "./components/Signin/Signin";
+import Register from "./components/Register/Register";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
@@ -33,6 +34,7 @@ class App extends Component {
       imageUrl: "",
       box: {},
       route: "signin",
+      isSignedIn: false,
       celeb: "",
       likeness: ""
     };
@@ -41,10 +43,12 @@ class App extends Component {
   calculateFaceLocation = data => {
     console.log(data);
     this.setState({
-      celeb: (data.outputs[0].data.regions[0].data.concepts[0].name).toUpperCase()
+      celeb: data.outputs[0].data.regions[0].data.concepts[0].name.toUpperCase()
     });
     this.setState({
-      likeness: ((data.outputs[0].data.regions[0].data.concepts[0].value) * 100).toFixed(2)
+      likeness: (
+        data.outputs[0].data.regions[0].data.concepts[0].value * 100
+      ).toFixed(2)
     });
     const clarifaiFace =
       data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -78,6 +82,11 @@ class App extends Component {
   };
 
   onRouteChange = route => {
+    if (route === "signout") {
+      this.setState({ isSignedIn: false });
+    } else if (route === "home") {
+      this.setState({ isSignedIn: true });
+    }
     this.setState({ route: route });
   };
 
@@ -86,9 +95,7 @@ class App extends Component {
       <div className="App">
         <Particles className="particles" params={particlesOptions} />
         <Navigation onRouteChange={this.onRouteChange} />
-        {this.state.route === "signin" ? (
-          <Signin onRouteChange={this.onRouteChange} />
-        ) : (
+        {this.state.route === "home" ? (
           <div>
             <Logo />
             <Rank />
@@ -103,6 +110,10 @@ class App extends Component {
               likeness={this.state.likeness}
             />
           </div>
+        ) : this.state.route === "signin" ? (
+          <Signin onRouteChange={this.onRouteChange} />
+        ) : (
+          <Register onRouteChange={this.onRouteChange} />
         )}
       </div>
     );
