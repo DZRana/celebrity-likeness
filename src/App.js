@@ -60,7 +60,6 @@ class App extends Component {
   };
 
   calculateFaceLocation = data => {
-    console.log(data);
     this.setState({
       celeb: data.outputs[0].data.regions[0].data.concepts[0].name.toUpperCase()
     });
