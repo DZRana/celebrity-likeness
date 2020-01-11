@@ -1,4 +1,10 @@
 import React from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure({
+  autoClose: 3000
+});
 
 class Signin extends React.Component {
   constructor(props) {
@@ -17,7 +23,7 @@ class Signin extends React.Component {
     this.setState({ signInPassword: event.target.value });
   };
 
-  onSubmitSignIn = async () => {
+  callSigninEndpoint = async () => {
     try {
       const res = await fetch("http://localhost:3000/signin", {
         method: "post",
@@ -35,6 +41,10 @@ class Signin extends React.Component {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  onSubmitSignIn = event => {
+    if (event.key === "Enter") this.callSigninEndpoint();
   };
 
   render() {
@@ -55,6 +65,8 @@ class Signin extends React.Component {
                   name="email-address"
                   id="email-address"
                   onChange={this.onEmailChange}
+                  onKeyDown={this.onSubmitSignIn}
+                  required
                 />
               </div>
               <div className="mv3">
@@ -67,6 +79,7 @@ class Signin extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
+                  onKeyDown={this.onSubmitSignIn}
                 />
               </div>
             </fieldset>
@@ -75,7 +88,7 @@ class Signin extends React.Component {
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
                 value="Sign in"
-                onClick={this.onSubmitSignIn}
+                onClick={this.callSigninEndpoint}
               />
             </div>
             <div className="lh-copy mt3">

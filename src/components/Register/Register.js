@@ -22,7 +22,7 @@ class Register extends React.Component {
     this.setState({ name: event.target.value });
   };
 
-  onSubmitSignIn = async () => {
+  callRegisterEndpoint = async () => {
     try {
       const res = await fetch("http://localhost:3000/register", {
         method: "post",
@@ -43,6 +43,10 @@ class Register extends React.Component {
     }
   };
 
+  onSubmitRegister = event => {
+    if (event.key === "Enter") this.callRegisterEndpoint();
+  };
+
   render() {
     return (
       <article className="br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6  shadow-5 center">
@@ -60,6 +64,7 @@ class Register extends React.Component {
                   name="name"
                   id="name"
                   onChange={this.onNameChange}
+                  onKeyDown={this.onSubmitRegister}
                 />
               </div>
               <div className="mt3">
@@ -72,6 +77,7 @@ class Register extends React.Component {
                   name="email-address"
                   id="email-address"
                   onChange={this.onEmailChange}
+                  onKeyDown={this.onSubmitRegister}
                 />
               </div>
               <div className="mv3">
@@ -84,6 +90,7 @@ class Register extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
+                  onKeyDown={this.onSubmitRegister}
                 />
               </div>
             </fieldset>
@@ -92,7 +99,7 @@ class Register extends React.Component {
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
                 value="Register"
-                onClick={this.onSubmitSignIn}
+                onClick={this.callRegisterEndpoint}
               />
             </div>
           </div>
