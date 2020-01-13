@@ -17,6 +17,15 @@ const particlesOptions = {
         enable: true,
         value_area: 800
       }
+    },
+    color: {
+      value: "#ffff00"
+    },
+    shape: {
+      type: "star"
+    },
+    size: {
+      value: 5
     }
   }
 };

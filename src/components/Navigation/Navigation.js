@@ -5,7 +5,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
     return (
       <nav style={{ display: "flex", justifyContent: "flex-end" }}>
         <p
-          className="f3 link dim black underline pa3 pointer"
+          className="f3 link dim white underline pa3 pointer"
           onClick={() => onRouteChange("signout")}
         >
           Sign Out
@@ -16,13 +16,13 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
     return (
       <nav style={{ display: "flex", justifyContent: "flex-end" }}>
         <p
-          className="f3 link dim black underline pa3 pointer"
+          className="f3 link dim white underline pa3 pointer"
           onClick={() => onRouteChange("signin")}
         >
           Sign In
         </p>
         <p
-          className="f3 link dim black underline pa3 pointer"
+          className="f3 link dim white underline pa3 pointer"
           onClick={() => onRouteChange("register")}
         >
           Register

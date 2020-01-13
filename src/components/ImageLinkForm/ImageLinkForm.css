@@ -1,104 +1,17 @@
 .form {
   width: 700px;
-  background-color: rgb(85, 85, 102);
-  background-image: linear-gradient(
-      30deg,
-      rgb(68, 68, 85) 12%,
-      transparent 12.5%,
-      transparent 87%,
-      rgb(68, 68, 85) 87.5%,
-      rgb(68, 68, 85)
-    ),
-    linear-gradient(
-      150deg,
-      rgb(68, 68, 85) 12%,
-      transparent 12.5%,
-      transparent 87%,
-      rgb(68, 68, 85) 87.5%,
-      rgb(68, 68, 85)
-    ),
-    linear-gradient(
-      30deg,
-      rgb(68, 68, 85) 12%,
-      transparent 12.5%,
-      transparent 87%,
-      rgb(68, 68, 85) 87.5%,
-      rgb(68, 68, 85)
-    ),
-    linear-gradient(
-      150deg,
-      rgb(68, 68, 85) 12%,
-      transparent 12.5%,
-      transparent 87%,
-      rgb(68, 68, 85) 87.5%,
-      rgb(68, 68, 85)
-    ),
-    linear-gradient(
-      60deg,
-      rgb(153, 153, 170) 25%,
-      transparent 25.5%,
-      transparent 75%,
-      rgb(153, 153, 170) 75%,
-      rgb(153, 153, 170)
-    ),
-    linear-gradient(
-      60deg,
-      rgb(153, 153, 170) 25%,
-      transparent 25.5%,
-      transparent 75%,
-      rgb(153, 153, 170) 75%,
-      rgb(153, 153, 170)
-    );
-  background-size: 80px 140px;
-  background-position: 0px 0px, 0px 0px, 40px 70px, 40px 70px, 0px 0px,
-    40px 70px;
-  --darkreader-inline-bgcolor: #505152;
-  --darkreader-inline-bgimage: linear-gradient(
-      30deg,
-      #515252 12%,
-      rgba(13, 13, 13, 0) 12.5%,
-      rgba(13, 13, 13, 0) 87%,
-      #515252 87.5%,
-      #515252
-    ),
-    linear-gradient(
-      150deg,
-      #515252 12%,
-      rgba(13, 13, 13, 0) 12.5%,
-      rgba(13, 13, 13, 0) 87%,
-      #515252 87.5%,
-      #515252
-    ),
-    linear-gradient(
-      30deg,
-      #515252 12%,
-      rgba(13, 13, 13, 0) 12.5%,
-      rgba(13, 13, 13, 0) 87%,
-      #515252 87.5%,
-      #515252
-    ),
-    linear-gradient(
-      150deg,
-      #515252 12%,
-      rgba(13, 13, 13, 0) 12.5%,
-      rgba(13, 13, 13, 0) 87%,
-      #515252 87.5%,
-      #515252
-    ),
-    linear-gradient(
-      60deg,
-      #454646 25%,
-      rgba(13, 13, 13, 0) 25.5%,
-      rgba(13, 13, 13, 0) 75%,
-      #454646 75%,
-      #454646
-    ),
-    linear-gradient(
-      60deg,
-      #454646 25%,
-      rgba(13, 13, 13, 0) 25.5%,
-      rgba(13, 13, 13, 0) 75%,
-      #454646 75%,
-      #454646
-    );
+  background: linear-gradient(324deg, #232927 4%, transparent 4%) -70px 43px,
+    linear-gradient(36deg, #232927 4%, transparent 4%) 30px 43px,
+    linear-gradient(72deg, #ffff00 8.5%, transparent 8.5%) 30px 43px,
+    linear-gradient(288deg, #ffff00 8.5%, transparent 8.5%) -70px 43px,
+    linear-gradient(216deg, #ffff00 7.5%, transparent 7.5%) -70px 23px,
+    linear-gradient(144deg, #ffff00 7.5%, transparent 7.5%) 30px 23px,
+    linear-gradient(324deg, #232927 4%, transparent 4%) -20px 93px,
+    linear-gradient(36deg, #232927 4%, transparent 4%) 80px 93px,
+    linear-gradient(72deg, #ffff00 8.5%, transparent 8.5%) 80px 93px,
+    linear-gradient(288deg, #ffff00 8.5%, transparent 8.5%) -20px 93px,
+    linear-gradient(216deg, #ffff00 7.5%, transparent 7.5%) -20px 73px,
+    linear-gradient(144deg, #ffff00 7.5%, transparent 7.5%) 80px 73px;
+  background-color: #232927;
+  background-size: 100px 100px;
 }
