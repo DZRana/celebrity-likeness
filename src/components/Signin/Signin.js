@@ -40,7 +40,7 @@ class Signin extends React.Component {
       if (user.id) {
         this.props.loadUser(user);
         this.props.onRouteChange("home");
-      } else toast.error("Wrong credentials!!");
+      } else toast.error("Wrong credentials!!!");
     } catch (err) {
       console.log(err);
     }
