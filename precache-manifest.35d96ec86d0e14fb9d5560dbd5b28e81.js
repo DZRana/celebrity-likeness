@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d476fca9b8334fc2fd907de3cdb17c22",
+    "revision": "2cd7bf2bb84a75e24b2d173909c2b4ef",
     "url": "/celebrity-likeness/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/celebrity-likeness/static/css/2.632827f6.chunk.css"
   },
   {
-    "revision": "8a3ee41be531ed71e774",
+    "revision": "1c61f1fe0e5ea60ba772",
     "url": "/celebrity-likeness/static/css/main.ee838573.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/celebrity-likeness/static/js/2.b4a06623.chunk.js.LICENSE"
   },
   {
-    "revision": "8a3ee41be531ed71e774",
-    "url": "/celebrity-likeness/static/js/main.7685fdd6.chunk.js"
+    "revision": "1c61f1fe0e5ea60ba772",
+    "url": "/celebrity-likeness/static/js/main.f51a929c.chunk.js"
   },
   {
     "revision": "23743ebd7c84c7260605",
