@@ -4,7 +4,11 @@ import "./ImageLinkForm.css";
 const ImageLinkForm = ({ onInputChange, onPictureSubmit }) => {
   return (
     <div className="ma4 mt0">
-      <p className="f3">{"Get your star celebrity look-alike, now!"}</p>
+      <p className="f3">
+        {
+          "Enter an image URL below to discover their star celebrity look-alike!"
+        }
+      </p>
       <div className="center">
         <div className="form center pa4 br3 shadow-5">
           <input

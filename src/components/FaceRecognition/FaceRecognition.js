@@ -7,7 +7,7 @@ const FaceRecognition = ({ imageUrl, box, celeb, likeness }) => {
       {celeb && (
         <div>
           <p>
-            {`Your face most closely resembles `}
+            {`This face most closely resembles `}
             <a
               href={`https://www.google.com/search?q=${celeb}`}
               target="_blank"
