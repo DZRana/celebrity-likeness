@@ -30,15 +30,18 @@ class Register extends React.Component {
 
   callRegisterEndpoint = async () => {
     try {
-      const res = await fetch("http://localhost:3000/register", {
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: this.state.email,
-          password: this.state.password,
-          name: this.state.name
-        })
-      });
+      const res = await fetch(
+        "https://sleepy-journey-82312.herokuapp.com/register",
+        {
+          method: "post",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: this.state.email,
+            password: this.state.password,
+            name: this.state.name
+          })
+        }
+      );
       const user = await res.json();
       if (user.id) {
         this.props.loadUser(user);
