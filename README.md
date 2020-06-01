@@ -2,6 +2,8 @@
 
 A full-stack application that leverages the Clarifai API and their trained celebrity AI model to determine which celebrity the user's image most closely resembles.
 
+Built with: `Postgres`, `Express`, `React`, `Node.js`
+
 [API repo](https://github.com/DZRana/celebrity-likeness-api)
 
 ## Live Demo
